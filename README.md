@@ -51,10 +51,10 @@ pip install -r requirements.txt
 ### 4. Launch the App
 
 ```bash
-streamlit run app.py
+streamlit run speech.py
 ```
 
-> Make sure to replace `app.py` with the actual name of your script if different.
+> Make sure to replace `speech.py` with the actual name of your script if different.
 
 ## 📁 Project Structure
 
