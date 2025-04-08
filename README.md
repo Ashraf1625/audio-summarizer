@@ -1,32 +1,83 @@
-# Music-to-Text Converter
+# 🎧 Audio Summarization App
 
-## Project Overview
-The Music-to-Text Converter is a web application designed to convert audio files, specifically music, into text transcriptions. Built using **Streamlit** and leveraging the **Wav2Vec2** model from **Hugging Face**, this application aims to facilitate the transcription of spoken words within music tracks into readable text format. This can be beneficial for various use cases, including accessibility for the hearing impaired and easier content consumption for users.
+An intuitive web application that transcribes spoken content from audio files and provides concise summaries using state-of-the-art machine learning models.
 
-## Features
-- **Audio Upload**: Users can upload music files in `.wav` or `.mp3` formats.
-- **Automatic Transcription**: The application automatically transcribes the audio content into text.
-- **Playback**: Users can listen to the uploaded audio file directly within the application.
-- **Download Option**: Users can download the generated transcription as a text file.
-- **User-Friendly Interface**: The application provides clear instructions for ease of use.
+## 📌 Overview
 
-## Technology Stack
-- **Python**: The programming language used for backend logic.
-- **Streamlit**: Framework used for building the web application.
-- **PyTorch**: Deep learning library utilized for model inference.
-- **Librosa**: Library for audio processing and manipulation.
-- **Transformers**: Hugging Face library providing pre-trained models.
+The Audio Summarization App allows users to upload `.wav` or `.mp3` files, automatically transcribes the speech using **Wav2Vec2** by Facebook, and summarizes the transcript with **DistilBART** from Hugging Face Transformers.
 
-## Requirements
-To run this application, ensure you have the following installed:
-- Python 3.7 or higher
-- Streamlit
-- PyTorch
-- librosa
-- Hugging Face Transformers
+Built with [Streamlit](https://streamlit.io/), this app is ideal for turning meetings, interviews, lectures, and other voice recordings into readable summaries in just a few clicks.
 
-### Installation
-You can install the required packages using pip:
+## 🧠 Key Features
+
+- 🎙️ Upload audio files in `.wav` or `.mp3` format
+- 🔊 Speech-to-text transcription with `facebook/wav2vec2-base-960h`
+- ✍️ Summarization with `sshleifer/distilbart-cnn-12-6`
+- ⚡ Fast, responsive interface using Streamlit
+- 🧹 Manual cache clearing option for better memory management
+
+## 🔧 Technologies & Models
+
+| Component        | Tool/Model                                   |
+| ---------------- | -------------------------------------------- |
+| Framework        | Streamlit                                    |
+| Speech-to-Text   | Wav2Vec2 (`facebook/wav2vec2-base-960h`)     |
+| Summarization    | DistilBART (`sshleifer/distilbart-cnn-12-6`) |
+| Audio Processing | Librosa                                      |
+| Backend          | PyTorch, Transformers                        |
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-pip install streamlit torch librosa transformers
+git clone https://github.com/YOUR_USERNAME/audio-summarizer.git
+cd audio-summarizer
+```
+
+### 2. Create a Virtual Environment (Optional but Recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Launch the App
+
+```bash
+streamlit run app.py
+```
+
+> Make sure to replace `app.py` with the actual name of your script if different.
+
+## 📁 Project Structure
+
+```
+audio-summarizer/
+├── app.py                # Main Streamlit application
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── ...
+```
+
+## ⚠️ Notes
+
+- Best results are achieved with clear, high-quality audio recordings.
+- The app supports English-language speech only (as per the pretrained models used).
+- Processing time may vary depending on audio length and system performance.
+
+## 🪪 License
+
+This project is licensed under the **MIT License**. Feel free to use, modify, and distribute it as needed.
+
+## 🙌 Acknowledgements
+
+- [Facebook AI](https://ai.facebook.com/) for `Wav2Vec2`
+- [Hugging Face](https://huggingface.co/) for pre-trained models
+- [Streamlit](https://streamlit.io/) for rapid app deployment
