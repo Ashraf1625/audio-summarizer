@@ -8,6 +8,8 @@ The Audio Summarization App allows users to upload `.wav` or `.mp3` files, autom
 
 Built with [Streamlit](https://streamlit.io/), this app is ideal for turning meetings, interviews, lectures, and other voice recordings into readable summaries in just a few clicks.
 
+> You Can Use the App from [Here](https://audio-summarizer-uskuuzavhnbh8fft4gpuuf.streamlit.app/)
+
 ## 🧠 Key Features
 
 - 🎙️ Upload audio files in `.wav` or `.mp3` format
